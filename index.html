@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Yeoman, Démarrez le développement Web moderne</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon-swiip.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Yeoman</h1>
+					<img src="img/illustration-home-inverted.1f86.png" style="height: 300px; background-color: white;">
+					<h3>Démarrez le développement Web moderne</h3>
+				</section>
+
+				<section>
+					<h2>Matthieu Lux</h2>
+					<ul>
+						<li style="list-style-type: none;">
+							<a href="https://twitter.com/Swiip">
+								<img src="img/Twitter_logo_blue.png" style="height: 60px; margin-right: 10px;">@Swiip
+							</a>
+						</li>
+						<li style="list-style-type: none;">
+							<a href="https://github.com/Swiip">
+								<img src="img/GitHub-Mark.png" style="height: 60px; margin-right: 10px;">Swiip
+							</a>
+						</li>
+					</ul>
+					<div class="flex-3-row">
+						<div>
+							<a href="http://zenika.com/">
+								<img src="img/logo-zenika.jpg">
+							</a>
+						</div>
+						<div>
+							<a href="http://www.meetup.com/LyonJS/">
+								<img src="img/logo.png" style="background-color: white;">
+							</a>
+						</div>
+						<div>
+							<a href="https://github.com/Swiip/generator-gulp-angular">
+								<img src="img/gulp-angular.png" style="background-color: white;">
+							</a>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Disclaimer</h2>
+					<h3>aimant à trolls</h3>
+					<img src="img/trolls.jpg">
+				</section>
+
+				<section>
+					<h2>Le passé</h2>
+					<img src="img/old-yeoman-logo.png" style="background-color: white; padding: 10px;">
+					<pre><code data-trim>
+yeoman init      # Initialize and scaffold a new project using generator templates
+yeoman build     # Build an optimized version of your app, ready to deploy
+yeoman server    # Launch a preview server which will begin watching for changes
+yeoman test      # Run a Mocha test harness in a headless PhantomJS
+
+yeoman install   # Install a package from the clientside package registry
+yeoman uninstall # Uninstall the package
+yeoman update    # Update a package to the latest version
+yeoman list      # List the packages currently installed
+yeoman search    # Query the registry for matching package names
+yeoman lookup    # Look up info on a particular package
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Le présent</h2>
+					<img src="img/yeoman-logo.png" style="background-color: white; height: 200px;">
+					<div class="flex-3-row flex-3-row-padding">
+						<div>
+							<img src="img/tool-yo.3dcc.png" style="background-color: lightgray;">
+							<p>Yo</p>
+						</div>
+						<div>
+							<img src="img/tool-grunt.a10d.png" style="background-color: rgba(251,169,25,1);">
+							<p>Grunt</p>
+						</div>
+						<div>
+							<img src="img/tool-bower.2cc5.png" style="background-color: rgba(255,204,47,1);">
+							<p>Bower</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Le futur</h2>
+					<h3>"Opinions are my own"</h3>
+					<img src="img/tool-yo.3dcc.png" style="height: 200px; padding: 0 40px; background-color: lightgray;">
+				</section>
+
+				<section>
+					<h2>Générer du code ?</h2>
+					<ul>
+						<li>C'est mal ! ... Oui mais ?</li>
+						<li>Le build, un besoin particulier</li>
+						<li>Les processus deviennent de plus en plus complexes</li>
+						<li>Les outils de plus en plus nombreux</li>
+						<li>Il n'y a pas deux projets identiques</li>
+					</ul>
+					<h3 style="margin-top: 40px;">Générez... puis modifiez !</h3>
+				</section>
+
+				<section>
+					<h2>Le "Workflow" Yeoman</h2>
+				</section>
+
+				<section>
+					<h2>Préparation</h2>
+					<pre><code data-trim>
+$ npm install -g yo bower grunt-cli gulp
+$ npm install -g generator-webapp
+$ yo
+					</code></pre>
+					<img src="img/yo.png">
+				</section>
+
+				<section>
+					<h2>Initialiser son projet</h2>
+					<div class="img-overflow">
+						<img src="img/yeoman-run.png">
+					</div>
+				</section>
+
+				<section>
+					<h2>Dev avec livereload</h2>
+					<div class="img-overflow">
+						<img src="img/yeoman-serve.png">
+					</div>
+				</section>
+
+				<section>
+					<h2>Tests préconfigurés</h2>
+					<div class="img-overflow">
+						<img src="img/yeoman-test.png">
+					</div>
+				</section>
+
+				<section>
+					<h3>Build aux petits oignons</h3>
+					<div class="img-overflow">
+						<img src="img/yeoman-build.png">
+					</div>
+				</section>
+
+				<section>
+					<h2>Créer un générateur</h2>
+				</section>
+
+				<section>
+					<h2>Créer un projet NPM</h2>
+					<pre><code data-trim>
+{
+  "name": "generator-name",
+  "version": "0.1.0",
+  "description": "",
+  "files": ["app", "router"],
+  "keywords": ["yeoman-generator"],
+  "dependencies": {
+    "yeoman-generator": "^0.17.3"
+  }
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Etendre la classe Generator</h2>
+					<pre><code data-trim>
+var generators = require('yeoman-generator');
+
+module.exports = generators.Base.extend({
+  // The name `constructor` is important here
+  constructor: function () {
+    // Calling the super constructor is important
+    // so our generator is correctly set up
+    generators.Base.apply(this, arguments);
+
+    // Next, add your custom code
+    // This method adds support for a `--coffee` flag
+    this.option('coffee');
+  }
+});
+					</code></pre>
+					<a href="https://github.com/yeoman/generator">
+						https://github.com/yeoman/generator
+					</a>
+				</section>
+
+				<section>
+					<h2>Inquirer</h2>
+					<pre><code data-trim>
+module.exports = generators.Base.extend({
+  prompting: function () {
+    var done = this.async();
+    this.prompt({
+      type    : 'input',
+      name    : 'name',
+      message : 'Your project name',
+      default : this.appname // Default to current folder name
+    }, function (answers) {
+      this.log(answers.name);
+      done();
+    }.bind(this));
+  }
+})
+					</code></pre>
+					<a href="https://github.com/SBoudrias/Inquirer.js">
+						https://github.com/SBoudrias/Inquirer.js
+					</a>
+				</section>
+
+				<section>
+					<h2>Editeur de gruntfile</h2>
+					<pre><code data-trim>
+module.exports = generators.Base.extend({
+  writing: function () {
+    this.gruntfile.insertConfig('compass', '{ foo: "bar" }');
+    // output:
+    // grunt.initConfig({
+    //   compass: {
+    //     watch: { watch: true }
+    //   }
+    // });
+
+    this.gruntfile.registerTask('build', 'compass');
+    // output:
+    // grunt.registerTask('build', ['compass']);
+  }
+});
+					</code></pre>
+					<a href="https://github.com/SBoudrias/gruntfile-editor">
+						https://github.com/SBoudrias/gruntfile-editor
+					</a>
+				</section>
+
+
+				<section>
+					<h2>Gestion de fichiers</h2>
+					<pre><code data-trim>
+generators.Base.extend({
+  writing: function () {
+    this.fs.copyTpl(
+      this.templatePath('index.html'),
+      this.destinationPath('public/index.html'),
+      { title: 'Templating with Yeoman' }
+    );
+  }
+});
+					</code></pre>
+					<a href="https://github.com/sboudrias/mem-fs-editor">
+						https://github.com/sboudrias/mem-fs-editor
+					</a>
+				</section>
+
+				<section>
+					<h2>Yosay</h2>
+					<img src="img/yosay.png" style="height: 300px;">
+					<h3>Indispensable !</h3>
+					<a href="https://github.com/yeoman/yosay">
+						https://github.com/yeoman/yosay
+					</a>
+				</section>
+
+				<section>
+					<h2>Les génerateurs</h2>
+					<img src="img/generator-list.png" style="height: 450px;">
+					<p><a href="http://yeoman.io/generators/">http://yeoman.io/generators/</a></p>
+				</section>
+
+				<section>
+					<h2>La finalité</h2>
+					<h3>Démarrer avec n'importe quelle technologie</h3>
+					<img src="img/yo-packages.jpg" style="height: 350px;">
+				</section>
+
+				<section>
+					<h3>Backend</h3>
+					<div class="comparison">
+						<div class="main">
+							<div style="background-color: #eee;">
+								<div>
+									<img src="img/express.png" style="padding: 89px 20px;">
+									<p style="color: #353535;">Node.js & Express</p>
+								</div>
+							</div>
+							<div style="background-color: #6db33f;">
+								<div>
+									<img src="img/spring-boot-project-logo.png">
+									<p>Spring Boot</p>
+								</div>
+							</div>
+						</div>
+						<div class="other">
+							<img src="img/golang.png">
+							<img src="img/php.png">
+							<img src="img/wordpress.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>Framework UI</h3>
+					<div class="comparison">
+						<div class="main">
+							<div style="background-color: #6f5499;">
+								<div>
+									<img src="img/bootstrap-1.jpg">
+									<p>Bootstrap</p>
+								</div>
+							</div>
+							<div style="background-color: #00bcd4;">
+								<div>
+									<img src="img/materialdesign_principles_metaphor.png" style="background-color: #b4e0e1;">
+									<p>Material Design</p>
+								</div>
+							</div>
+						</div>
+						<div class="other">
+							<img src="img/yeti.png">
+							<img src="img/semantic.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>Framework Web</h3>
+					<div class="comparison">
+						<div class="main">
+							<div style="background-color: #0143A3;">
+								<div>
+									<img src="img/angular.png">
+									<p>Angular</p>
+								</div>
+							</div>
+							<div style="background-color: #2d2d2d;">
+								<div>
+									<img src="img/react.png" style="background-color: #222;">
+									<p>React</p>
+								</div>
+							</div>
+						</div>
+						<div class="other">
+							<img src="img/Ember.js_Logo_and_Mascot.png">
+							<img src="img/Backbone_logo_logo_only.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>Build</h3>
+					<div class="comparison">
+						<div class="main">
+							<div style="background-color: rgba(251,169,25,1);">
+								<div>
+									<img src="img/tool-grunt.a10d.png">
+									<p>Grunt</p>
+								</div>
+							</div>
+							<div style="background-color: #cf4646;">
+								<div>
+									<img src="img/gulp-logo.png">
+									<p>Gulp</p>
+								</div>
+							</div>
+						</div>
+						<div class="other">
+							<img src="img/brunch2.jpeg">
+							<img src="img/broccoli-logo-small.generated.png">
+							<img src="img/jake.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>Gestion de dépendances</h3>
+					<div class="comparison">
+						<div class="main">
+							<div style="background-color: rgba(251,169,25,1);">
+								<div>
+									<img src="img/bower-logo.png">
+									<p>Bower</p>
+								</div>
+							</div>
+							<div style="background-color: #cf4646;">
+								<div>
+									<img src="img/npm.png">
+									<p>NPM</p>
+								</div>
+							</div>
+						</div>
+						<div class="other">
+							<img src="img/component.png">
+							<img src="img/jspmio.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>Common JS</h3>
+					<div class="comparison">
+						<div class="main">
+							<div style="background-color: rgba(251,169,25,1);">
+								<div>
+									<img src="img/browserify.png">
+									<p>Browserify</p>
+								</div>
+							</div>
+							<div style="background-color: #cf4646;">
+								<div>
+									<img src="img/webpack.png">
+									<p>Webpack</p>
+								</div>
+							</div>
+						</div>
+						<div class="other">
+							<img src="img/systemjs.png">
+							<img src="img/requirejs.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>Préprocesseur JS</h3>
+					<div class="comparison">
+						<div class="main">
+							<div style="background-color: rgba(251,169,25,1);">
+								<div>
+									<img src="img/babel.png">
+									<p>Babel</p>
+								</div>
+							</div>
+							<div style="background-color: #cf4646;">
+								<div>
+									<img src="img/coffee-logo.png">
+									<p>CoffeeScript</p>
+								</div>
+							</div>
+						</div>
+						<div class="other">
+							<img src="img/typescript.png">
+							<img src="img/traceur.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>JS Linter</h3>
+					<div class="comparison">
+						<div class="main">
+							<div style="background-color: rgba(251,169,25,1);">
+								<div>
+									<img src="img/jshint.png">
+									<p>JS Hint</p>
+								</div>
+							</div>
+							<div style="background-color: #cf4646;">
+								<div>
+									<img src="img/coffee-logo.png">
+									<p>ES Lint</p>
+								</div>
+							</div>
+						</div>
+						<div class="other">
+							<img src="img/jscs.png">
+						</div>
+					</div>
+				</section>
+
+				<section>CSS Prepro</section>
+				<section>HTML Prepro</section>
+				<section>Dev server</section>
+				<section>Test Framework</section>
+				<section>Test tools</section>
+				<section>Demo time</section>
+
+				<section>
+					<h1>THE END</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+			Reveal.addEventListener( 'max', function() {
+				document.querySelector('.slides').setAttribute('style', '');
+				document.querySelector('.present').setAttribute('style', '');
+			} );
+
+		</script>
+
+	</body>
+</html>
