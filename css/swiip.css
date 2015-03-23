@@ -1,0 +1,108 @@
+@import url(fonts/quicksand.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
+.reveal {
+  font-family: 'Lato', sans-serif;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.reveal a {
+  color: #eee8d5;
+}
+
+.reveal img {
+  vertical-align: middle;
+}
+
+.reveal .img-container {
+  margin: 15px 0;
+  background: white;
+  border: 4px solid #93a1a1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.reveal .img-container img {
+  margin: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.reveal .img-container.medium {
+  height: 250px;
+  width: 250px;
+}
+
+.reveal .img-container.small {
+  height: 100px;
+  width: 100px;
+}
+
+.reveal .flex-3-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.reveal .flex-3-row>div {
+  flex-grow: 1;
+}
+
+.reveal .flex-3-row>div img {
+  height: 200px;
+}
+
+.reveal .flex-3-row.flex-3-row-padding>div img {
+  padding: 0 40px;
+}
+
+.reveal .img-overflow {
+  overflow: auto;
+  width: 100%;
+  height: 500px;
+}
+
+.reveal .img-overflow img {
+  max-width: none;
+  max-height: none;
+  width: calc(100% - 8px);
+  margin: 0;
+}
+
+.reveal .comparison .main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.reveal .comparison .main>div {
+  flex-grow: 1;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reveal .comparison .main .img-container {
+  margin: auto;
+}
+
+.reveal .comparison .other {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.reveal .comparison .other>div {
+  margin: 0;
+}
+
+.reveal .comparison p {
+  color: white;
+}
