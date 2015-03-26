@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Yeoman, Démarrez le développement Web moderne</title>
+		<title>Yeoman, Start the modern Web development!</title>
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -42,7 +42,7 @@
 				<section>
 					<h1>Yeoman</h1>
 					<img src="img/illustration-home-inverted.1f86.png" style="height: 300px; background-color: white;">
-					<h3>Démarrez le développement Web moderne</h3>
+					<h3>Start the modern Web development!</h3>
 				</section>
 
 				<section>
@@ -80,12 +80,12 @@
 
 				<section>
 					<h2>Disclaimer</h2>
-					<h3>aimant à trolls</h3>
+					<h3>Trolls inside</h3>
 					<img src="img/trolls.jpg">
 				</section>
 
 				<section>
-					<h2>Le passé</h2>
+					<h2>Past</h2>
 					<img src="img/old-yeoman-logo.png" style="background-color: white; padding: 10px;">
 					<pre><code data-trim>
 yeoman init      # Initialize and scaffold a new project using generator templates
@@ -103,7 +103,7 @@ yeoman lookup    # Look up info on a particular package
 				</section>
 
 				<section>
-					<h2>Le présent</h2>
+					<h2>Present</h2>
 					<img src="img/yeoman-logo.png" style="background-color: white; height: 200px;">
 					<div class="flex-3-row flex-3-row-padding">
 						<div>
@@ -122,29 +122,29 @@ yeoman lookup    # Look up info on a particular package
 				</section>
 
 				<section>
-					<h2>Le futur</h2>
+					<h2>Futur</h2>
 					<h3>"Opinions are my own"</h3>
 					<img src="img/tool-yo.3dcc.png" style="height: 200px; padding: 0 40px; background-color: lightgray;">
 				</section>
 
 				<section>
-					<h2>Générer du code ?</h2>
+					<h2>Generate code?</h2>
 					<ul>
-						<li>C'est mal ! ... Oui mais ?</li>
-						<li>Le build, un besoin particulier</li>
-						<li>Les processus deviennent de plus en plus complexes</li>
-						<li>Les outils de plus en plus nombreux</li>
-						<li>Il n'y a pas deux projets identiques</li>
+						<li>It's wrong! ... Yes but?</li>
+						<li>The build, a special case</li>
+						<li>Build processes are more and more complex</li>
+						<li>There are more and more tools to integrate</li>
+						<li>There is no 2 projects with the same exact needs</li>
 					</ul>
-					<h3 style="margin-top: 40px;">Générez... puis modifiez !</h3>
+					<h3 style="margin-top: 40px;">Generate... then modify!</h3>
 				</section>
 
 				<section>
-					<h2>Le "Workflow" Yeoman</h2>
+					<h2>The Yeoman "Workflow"</h2>
 				</section>
 
 				<section>
-					<h2>Préparation</h2>
+					<h2>Warm-up</h2>
 					<pre><code data-trim>
 $ npm install -g yo bower grunt-cli gulp
 $ npm install -g generator-webapp
@@ -154,39 +154,39 @@ $ yo
 				</section>
 
 				<section>
-					<h2>Initialiser son projet</h2>
+					<h2>Initiate the project</h2>
 					<div class="img-overflow">
 						<img src="img/yeoman-run.png">
 					</div>
 				</section>
 
 				<section>
-					<h2>Dev avec livereload</h2>
+					<h2>Dev with livereload</h2>
 					<div class="img-overflow">
 						<img src="img/yeoman-serve.png">
 					</div>
 				</section>
 
 				<section>
-					<h2>Tests préconfigurés</h2>
+					<h2>Preconfigured tests</h2>
 					<div class="img-overflow">
 						<img src="img/yeoman-test.png">
 					</div>
 				</section>
 
 				<section>
-					<h3>Build aux petits oignons</h3>
+					<h3>Optimizrd build process</h3>
 					<div class="img-overflow">
 						<img src="img/yeoman-build.png">
 					</div>
 				</section>
 
 				<section>
-					<h2>Créer un générateur</h2>
+					<h2>Create a generator</h2>
 				</section>
 
 				<section>
-					<h2>Créer un projet NPM</h2>
+					<h2>Create an NPM project</h2>
 					<pre><code data-trim>
 {
   "name": "generator-name",
@@ -202,7 +202,7 @@ $ yo
 				</section>
 
 				<section>
-					<h2>Etendre la classe Generator</h2>
+					<h2>Extends the Generator "class"</h2>
 					<pre><code data-trim>
 var generators = require('yeoman-generator');
 
@@ -242,13 +242,13 @@ module.exports = generators.Base.extend({
   }
 })
 					</code></pre>
-					<a href="https://github.com/SBoudrias/Inquirer.js">
-						https://github.com/SBoudrias/Inquirer.js
+					<a href="https://github.com/sboudrias/inquirer.js">
+						https://github.com/sboudrias/inquirer.js
 					</a>
 				</section>
 
 				<section>
-					<h2>Editeur de gruntfile</h2>
+					<h2>Gruntfile editor</h2>
 					<pre><code data-trim>
 module.exports = generators.Base.extend({
   writing: function () {
@@ -266,14 +266,14 @@ module.exports = generators.Base.extend({
   }
 });
 					</code></pre>
-					<a href="https://github.com/SBoudrias/gruntfile-editor">
-						https://github.com/SBoudrias/gruntfile-editor
+					<a href="https://github.com/sboudrias/gruntfile-editor">
+						https://github.com/sboudrias/gruntfile-editor
 					</a>
 				</section>
 
 
 				<section>
-					<h2>Gestion de fichiers</h2>
+					<h2>File management</h2>
 					<pre><code data-trim>
 generators.Base.extend({
   writing: function () {
@@ -293,21 +293,21 @@ generators.Base.extend({
 				<section>
 					<h2>Yosay</h2>
 					<img src="img/yosay.png" style="height: 300px;">
-					<h3>Indispensable !</h3>
+					<h3>Essential!</h3>
 					<a href="https://github.com/yeoman/yosay">
 						https://github.com/yeoman/yosay
 					</a>
 				</section>
 
 				<section>
-					<h2>Les génerateurs</h2>
+					<h2>The generators</h2>
 					<img src="img/generator-list.png" style="height: 450px;">
 					<p><a href="http://yeoman.io/generators/">http://yeoman.io/generators/</a></p>
 				</section>
 
 				<section>
-					<h2>La finalité</h2>
-					<h3>Démarrer avec n'importe quelle technologie</h3>
+					<h2>The purpose</h2>
+					<h3>Start a new project with any technology</h3>
 					<img src="img/yo-packages.jpg" style="height: 350px;">
 				</section>
 
@@ -341,6 +341,41 @@ generators.Base.extend({
 				</section>
 
 				<section>
+					<h3>Node.js & Express</h3>
+					<pre><code data-trim>
+server.all('/frameworks/:_id', function (req, res) {
+  MongooseModel.findOne(req.params, function (err, doc) {
+    if(err) {
+      res.status(500).send('Error', err);
+    }
+    res.send(doc);
+  });
+});
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Spring Boot</h3>
+					<pre><code data-trim>
+@RestController
+@RequestMapping("/api")
+public class UserResource {
+    @Inject
+    private UserRepository userRepository;
+
+    @RequestMapping(value = "/users/{login}",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity&lt;User> getUser(@PathVariable String login) {
+        return userRepository.findOneByLogin(login)
+                .map(user -> new ResponseEntity<>(user, HttpStatus.OK))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+}
+					</code></pre>
+				</section>
+
+				<section>
 					<h3>Framework UI</h3>
 					<div class="comparison">
 						<div class="main">
@@ -368,6 +403,51 @@ generators.Base.extend({
 							</div>
 						</div>
 					</div>
+				</section>
+
+				<section>
+					<h3>Bootstrap</h3>
+					<pre><code data-trim>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Hello, world!</h1>
+    <p>This is a template.</p>
+    <p><a class="btn btn-primary btn-lg" href="#">Learn more</a></p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Heading</h2>
+      <p>Donec id elit non mi porta.</p>
+      <p><a class="btn btn-default" href="#">View details</a></p>
+    </div>
+  </div>
+</div>
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Material Design</h3>
+					<pre><code data-trim>
+&lt;body layout="column">
+  <md-toolbar layout="row">
+    <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn">
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <h1 class="md-toolbar-tools" layout-align-gt-sm="center">
+      Hello World
+    </h1>
+  </md-toolbar>
+  <div layout="row" flex>
+    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')"></md-sidenav>
+    <div layout="column" flex id="content">
+      <md-content layout="column" flex class="md-padding">
+      </md-content>
+    </div>
+  </div>
+&lt;/body>
+					</code></pre>
 				</section>
 
 				<section>
@@ -399,6 +479,39 @@ generators.Base.extend({
 				</section>
 
 				<section>
+					<h3>Angular</h3>
+					<pre><code data-trim>
+@Component({selector: 'my-app'})
+@Template({inline: '<h1>Hi {{ name }}</h1>'})
+// Component controller
+class MyAppComponent {
+  constructor() {
+    this.name = 'Swiip';
+  }
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>React</h3>
+					<pre><code data-trim>
+var CommentBox = React.createClass({
+  render: function() {
+    return (
+      <div className="commentBox">
+        Hello, world! I am a CommentBox.
+      </div>
+    );
+  }
+});
+React.render(
+  &lt;CommentBox />,
+  document.getElementById('content')
+);
+					</code></pre>
+				</section>
+
+				<section>
 					<h3>Build</h3>
 					<div class="comparison">
 						<div class="main">
@@ -425,6 +538,49 @@ generators.Base.extend({
 							<div class="img-container small"><img src="img/jake.png"></div>
 						</div>
 					</div>
+				</section>
+
+				<section>
+					<h3>Grunt</h3>
+					<pre><code data-trim>
+module.exports = function(grunt) {
+  grunt.initConfig({
+    jshint: {
+      files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js']
+    },
+    watch: {
+      files: ['<%= jshint.files %>'],
+      tasks: ['jshint']
+    }
+  });
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.registerTask('default', ['jshint']);
+};
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Gulp</h3>
+					<pre><code data-trim>
+var gulp = require('gulp');
+var coffee = require('gulp-coffee');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
+
+gulp.task('scripts', function() {
+  return gulp.src([
+    'client/js/**/*.coffee',
+    '!client/external/**/*.coffee'
+  ]).pipe(sourcemaps.init())
+      .pipe(coffee())
+      .pipe(uglify())
+      .pipe(concat('all.min.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('build/js'));
+});
+					</code></pre>
 				</section>
 
 				<section>
@@ -486,6 +642,24 @@ generators.Base.extend({
 				</section>
 
 				<section>
+					<h3>CommonJS</h3>
+					<pre><code data-trim>
+//example.js
+
+exports.hello = function() {
+  return 'Hello World'
+};
+					</code></pre>
+					<pre><code data-trim>
+//index.js
+
+var example = require('./example.js');
+
+example.hello();
+					</code></pre>
+				</section>
+
+				<section>
 					<h3>Préprocesseur JS</h3>
 					<div class="comparison">
 						<div class="main">
@@ -511,6 +685,40 @@ generators.Base.extend({
 							<div class="img-container small"><img src="img/traceur.png"></div>
 						</div>
 					</div>
+				</section>
+
+				<section>
+					<h3>Babel</h3>
+					<pre><code data-trim>
+import React from 'react';
+
+export default class HelloWorld extends React.Component {
+  constructor() {
+    this.state = { hello: 'world' };
+  }
+
+  render() {
+    return (
+      <h1>Hello { this.state.hello }!</h1>
+    );
+  }
+});
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>CoffeeScript</h3>
+					<pre><code data-trim>
+class Animal
+  constructor: (@name) ->
+
+class Parrot extends Animal
+
+Animal::rip = true
+
+parrot = new Parrot("Macaw")
+alert("This parrot is no more") if parrot.rip
+					</code></pre>
 				</section>
 
 				<section>
@@ -567,6 +775,51 @@ generators.Base.extend({
 					</div>
 				</section>
 
+				<section>
+					<h3>Sass</h3>
+					<pre><code data-trim>
+#header {
+  height: 72px;
+  background: $header-background-color;
+  @include clearfix;
+
+  h1 {
+    color: white;
+    @include float-left;
+    a {
+      @include replace-text("logo.jpg");
+      width: 116px;
+      height: 72px;
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Less</h3>
+					<pre><code data-trim>
+#box {
+  a {
+    background-color: @primaryColor;
+    color: #fff;
+    display: block;
+
+    height: @boxHeight;
+    width: @boxWidth;
+    line-height: @boxHeight;
+
+    text-align: center;
+    text-decoration: none;
+
+    .roundedCorners(20px);
+    .boxShadow;
+  }
+}
+					</code></pre>
+				</section>
 
 				<section>
 					<h3>HTML Preprocessor</h3>
@@ -596,6 +849,41 @@ generators.Base.extend({
 				</section>
 
 				<section>
+					<h3>Jade</h3>
+					<pre><code data-trim>
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    script(type='text/javascript').
+      if (foo)
+         bar(1 + 5)
+  body
+    h1 Jade - node template engine
+    #container.col
+      if youAreUsingJade
+        p You are amazing
+      else
+        p Get on it!
+      p.
+        Jade is a terse and simple templating language with a
+        strong focus on performance and powerful features.
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Haml</h3>
+					<pre><code data-trim>
+#content
+  .left.column
+    %h2 Welcome to our site!
+    %p= print_information
+  .right.column
+    = render :partial => "sidebar"
+					</code></pre>
+				</section>
+
+				<section>
 					<h3>Development server</h3>
 					<div class="comparison">
 						<div class="main">
@@ -617,6 +905,11 @@ generators.Base.extend({
 							</div>
 						</div>
 					</div>
+				</section>
+
+				<section>
+					<h3>Browser Sync</h3>
+					<img src="img/browser-sync-screen.png">
 				</section>
 
 				<section>
@@ -647,6 +940,29 @@ generators.Base.extend({
 				</section>
 
 				<section>
+					<h3>Tests</h3>
+					<pre><code data-trim>
+describe("A spec using beforeEach and afterEach", function() {
+  var foo = 0;
+
+  beforeEach(function() {
+    foo += 1;
+  });
+  afterEach(function() {
+    foo = 0;
+  });
+
+  it("is just a function, so it can contain any code", function() {
+    expect(foo).toEqual(1);
+  });
+  it("can have more than one expectation", function() {
+    expect(foo).toEqual(1);
+  });
+});
+					</code></pre>
+				</section>
+
+				<section>
 					<h3>Test tools</h3>
 					<div class="comparison">
 						<div class="main">
@@ -671,6 +987,36 @@ generators.Base.extend({
 							<div class="img-container small"><img src="img/protractor-logo.png"></div>
 						</div>
 					</div>
+				</section>
+
+				<section>
+					<h3>Karma</h3>
+					<pre><code data-trim>
+[18:07:20] Starting 'test'...
+INFO [karma]: Karma v0.12.31 server started at http://localhost:9876/
+INFO [launcher]: Starting browser PhantomJS
+WARN [watcher]: Pattern "/Users/Swiip/Workspace/Sandbox/gulp-angular/src/**/*.mock.js" does not match any file.
+INFO [PhantomJS 1.9.8 (Mac OS X)]: Connected on socket kupuXHYFbdMl74Vi5xS2 with id 47216180
+PhantomJS 1.9.8 (Mac OS X): Executed 1 of 1 SUCCESS (0.004 secs / 0.016 secs)
+[18:07:23] Finished 'test' after 2.87 s
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Istanbul</h3>
+					<pre><code data-trim>
+=============================================================================
+Writing coverage object [/Users/Swiip/Workspace/GitHub/generator-gulp-angular/coverage/coverage.json]
+Writing coverage reports at [/Users/Swiip/Workspace/GitHub/generator-gulp-angular/coverage]
+=============================================================================
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 667/667 )
+Branches     : 100% ( 308/308 )
+Functions    : 100% ( 94/94 )
+Lines        : 100% ( 667/667 )
+================================================================================
+					</code></pre>
 				</section>
 
 				<section>
