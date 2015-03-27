@@ -106,3 +106,12 @@
 .reveal .comparison p {
   color: white;
 }
+
+.reveal .wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reveal .wrap .img-container {
+  margin: 0;
+}
